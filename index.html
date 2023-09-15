@@ -81,6 +81,22 @@
             font-family: 'Qwitcher Grypen', cursive;
 
         }
+        .custom-btn{
+        background-image: linear-gradient(to bottom, transparent 50%, rgb(39, 36, 36) 50%);
+        background-size: 100% 200%;
+        background-position: top;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50px;
+        padding: 5px 30px;
+        font-weight: 600;
+        font-size: small;        
+        color: rgb(0, 0, 0);
+        transition: all ease-in-out .2s;
+        }
+        .custom-btn:hover {
+            color: rgb(255, 255, 255);
+            background-position: bottom;
+        }
         @media(max-width: 600px){
             .contents-container{
                 display: flex;
@@ -160,7 +176,7 @@
                     <p class="display-6 fw-medium w-75 ">BASIC/DEPT® is a global branding and digital design agency building products, services, 
                     and eCommerce experiences that turn cultural values into company value.
                     </p>
-                    <buttot class="btn btn-outline-dark">See the work</buttot>
+                    <button class="custom-btn">See the work</button>
                 </div>
                 <div>
                     <p class="display-1 fw-bolder brand-costum-fs text-center text-md-end">B/D®️</p>
@@ -311,13 +327,13 @@
         <!--Featured news-->
         <div class="container-lg min-vh-100 px-0 ">
             <section class="featured-news">
-                <div class="d-flex justify-content-between bg-danger m-5">
-                    <div class="bg-light m-2">
+                <div class="d-flex justify-content-between m-5">
+                    <div class=" m-2">
                         <p class="fs-1 fw-medium my-0">FEATURED</p>
                         <p class="fs-1 fw-medium my-0">NEWS</p>
                     </div>
                     <div class="my-auto">
-                        <button class="btn btn-outline-secondary">VIEW ALL</button>
+                        <button class="custom-btn">VIEW ALL</button>
                     </div>
                 </div>
                 <hr class="my-6">
