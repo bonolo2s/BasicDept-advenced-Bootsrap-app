@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Lora:wght@500&family=Open+Sans:wght@300&family=Pacifico&family=Qwitcher+Grypen&display=swap');
+.custom-border {
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+.hover{
+    text-decoration: none;
+}
+.hover:hover {
+    text-decoration: underline;
+}
+.featured-news-img{
+    width: 35%;/*
+    transform: scale(1.1);*/
+}
+.featured-news-link{
+    text-decoration: none;
+    color: black;
+    
+}
+.parent-container:hover>.featured-news-img{
+    transform: scale(0.95);
+    transition: transform .5s ease;
+}
+.costum-bg-clr{
+    background-color: lightgray;
+    
+}
+.brand-costum-fs{
+    font-size: 8rem;
+}
+.slider-link{
+    text-decoration: none;
+    color: black;
+}
+.card{
+    overflow: hidden;
+}
+.slide1-imgs{
+    transform: scale(1.1);
+}
+.Card:hover>.slide1-imgs{
+    transform: scale(1);
+    transition: transform .5s ease;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.video-container{
+    position: relative;
+    width: 100%;
+}
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.patagonia-header-costum-fst{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+
+}
+.custom-btn{
+background-image: linear-gradient(to bottom, transparent 50%, rgb(39, 36, 36) 50%);
+background-size: 100% 200%;
+background-position: top;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 50px;
+padding: 5px 30px;
+font-weight: 600;
+font-size: small;        
+color: rgb(0, 0, 0);
+transition: all ease-in-out .2s;
+}
+.custom-btn:hover {
+    color: rgb(255, 255, 255);
+    background-position: bottom;
+}
+.Offcanvas-costum-color{
+    color: pink;
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+}
+.card-container{/*
+    max-height: 650px;*/
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.card-container::-webkit-scrollbar{
+    width: 0px;
+}
+.Card{
+    position: relative;
+    display: inline-block;
+    min-width: 350px;
+    height: 450px;
+    background-color: brown;
+    margin: 20px;
+    overflow: hidden;
+}
+.body{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    padding: 20px;
+    transform:translateY(50%);/*im gonna need that origin thing*/
+    transition: 0.5s all ease;
+    transform-origin: bottom;
+    background-color: rgb(54, 51, 52);
+}
+.Card:hover>.body{
+    transform:translateY(0)
+    
+}
+.card-img{
+    height: 80%;
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out; 
+}
+.Card:hover>.card-img{
+    transform: scale(1);
+}
+
+    /*Responsiveness of slider*/
+@media(max-width: 600px){
+    .contents-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .featured-news-img{
+    width: 100%;
+    }
+    .card-container{
+        flex-direction: column;
+    }
+    .Card{
+        position: relative;
+        display: inline-block;
+        min-width: 350px;
+        height: 450px;
+        margin: 20px;
+    }
+    .border-lines{
+        display: none;
+    }
+    .body{
+    transform:translateY(0);
+    background-color: rgb(32, 32, 30);
+}
+} 
+@media(max-width: 992px){
+    .card-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+        padding: 20px ;
+    }
+    .Card{
+        position: relative;
+        display: inline-block;
+        min-width: 300px;
+        height: 450px;
+        margin: 20px;
+    }
+    .border-lines{
+        display: none;
+    }
+    .body{
+    transform:translateY(0);
+    background-color: rgb(32, 32, 30);
+    }
+}

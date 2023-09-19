@@ -14,108 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Lora:wght@500&family=Open+Sans:wght@300&family=Pacifico&family=Qwitcher+Grypen&display=swap');
-        .custom-border {
-            border-bottom: 1px solid white;
-            width: 100%;
-        }
-        .hover{
-            text-decoration: none;
-        }
-        .hover:hover {
-            text-decoration: underline;
-        }
-        .featured-news-img{
-            width: 35%;/*
-            transform: scale(1.1);*/
-        }
-        .featured-news-link{
-            text-decoration: none;
-            color: black;
-            
-        }
-        .parent-container:hover>.featured-news-img{
-            transform: scale(0.95);
-            transition: transform .5s ease;
-        }
-        .costum-bg-clr{
-            background-color: lightgray;
-            
-        }
-        .brand-costum-fs{
-            font-size: 8rem;
-        }
-        .slider-link{
-            text-decoration: none;
-            color: black;
-        }
-        .card{
-            overflow: hidden;
-        }
-        .slide1-imgs{
-            transform: scale(1.1);
-        }
-        .Card:hover>.slide1-imgs{
-            transform: scale(1);
-            transition: transform .5s ease;
-        }
-        .wrapper::-webkit-scrollbar{
-            width: 0;
-        }
-        .video-container{
-            position: relative;
-            width: 100%;
-        }
-        .overlay-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .patagonia-header-costum-fst{
-            font-family: 'DM Sans', sans-serif;
-            font-family: 'Lora', serif;
-            font-family: 'Open Sans', sans-serif;
-            font-family: 'Pacifico', cursive;
-            font-family: 'Qwitcher Grypen', cursive;
-
-        }
-        .custom-btn{
-        background-image: linear-gradient(to bottom, transparent 50%, rgb(39, 36, 36) 50%);
-        background-size: 100% 200%;
-        background-position: top;
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 50px;
-        padding: 5px 30px;
-        font-weight: 600;
-        font-size: small;        
-        color: rgb(0, 0, 0);
-        transition: all ease-in-out .2s;
-        }
-        .custom-btn:hover {
-            color: rgb(255, 255, 255);
-            background-position: bottom;
-        }
-        .Offcanvas-costum-color{
-            color: pink;
-        }
-        #navbar{
-            position: fixed;
-            top: 0;
-            transition: top 0.3s;
-        }
-        @media(max-width: 600px){
-            .contents-container{
-                display: flex;
-                flex-direction: column;
-            }
-            .featured-news-img{
-            width: 100%;
-            }
-        }   
-
-    </style>
+    
     <body class="costum-bg-clr">
         <!--Home intro sec + navbar-->
         <section id="home" class="bg-secondary">
@@ -176,7 +75,7 @@
 
 
         <!--B/D section-->
-        <div class="container-lg min-vh-100 my-5">
+        <div class="container-lg min-vh-100 my-5 p-1">
             <hr>
             <br>
             <div class="d-flex flex-column flex-lg-row mt-5 ">
@@ -230,7 +129,7 @@
         </div>
 
         <!--Featured Engagements-->
-        <div class="container-lg min-vh-100" >
+        <div class="container-lg min-vh-100 p-1" >
             <div class="my-5">
                 <h1>FEATURED </h1>
                 <h1>ENGAGEMENTS</h1>
@@ -311,7 +210,7 @@
         </div>
 
         <!--Section that changes Bg of all content on scroll-->
-       <section class="mb-1 min-vh-100 overflow-hidden py-1">
+       <section class="mb-1 min-vh-100 overflow-hidden p-1">
             <div class="container-lg p-0">
                 <div class="row">
                     <div class="col-12 col-md-6">
@@ -330,7 +229,7 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="video-container">
-                            <video loop autoplay muted src="Assets/Culture-Loop_v1.mp4" style="position: absolute;top: 0;left: 0;object-fit: cover;"></video>
+                            <video loop autoplay muted src="Assets/Culture-Loop_v1.mp4" style="position: absolute;width: 100%;"></video>
                         </div>
                     </div>
                 </div>
@@ -338,7 +237,7 @@
         </section>
 
         <!--Featured news-->
-        <div class="container-lg min-vh-100 px-0 ">
+        <div class="container-lg min-vh-100 px-1">
             <section class="featured-news">
                 <div class="d-flex justify-content-between m-5">
                     <div class=" m-2">
@@ -459,26 +358,98 @@
         </div>
 
         <!--OffCanvas content-->
-        <div class="offcanvas offcanvas-end w-100 bg-danger" tabindex="-1" id="SideBar" aria-labelledby="SideBar">
+        <div class="offcanvas offcanvas-end w-100 bg-secondary" tabindex="-1" id="SideBar" aria-labelledby="SideBar">
             <div class="container-lg">
-                <div class="offcanvas-header ">
-                    <p><i class="bi bi-circle-fill Offcanvas-costum-color fs-6"></i></p>
-                    <div class="d-flex flex-column flex-lg-row">
+                <div class="offcanvas-header d-flex flex-column flex-md-row">
+                    <div class="d-flex justify-content-between col-12 col-md-1">
+                        <p><i class="bi bi-circle-fill Offcanvas-costum-color fs-6"></i></p>
+                        <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row">
                         <p class="fw-medium w-25 Offcanvas-costum-color">(5) INTERNAL WORKS ©️23 <span class="fw-medium" style="font-size: 15px;">c/o</span>BASIC/DEPT®️ </p>
                         <p class="fw-medium w-50 Offcanvas-costum-color">A COLLECTION OF INTERNAL PROJECT AND INITIATIVES UNDER THE BASIC/DEPT®BRAND</p>
                     </div>
-                    <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close d-none d-md-block " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
             </div>
 
             <div class="offcanvas-body">
                 <!--Lets create those cards-->
+                <div class="card-container">
+                    <div class="border-lines">
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                        <p style="color: pink;">01</p>
+                    </div>
+                    <div class="Card">
+                            <img src="assets/jams.webp" alt="" class="card-img" style="width: 100%;">
+                        <div class="body">
+                            <p class="header display-4">lorem</p>
+                            <p style="color: pink;text-decoration: none;">A weekly-ish playlist curated by the employees @ BASIC/DEPT®️</p>
+                            <a href="#" style="text-decoration: none;color: pink;">Visit the Site</a>
+                        </div>
+                    </div>
+        
+                    <div class="border-lines"> 
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                        <p style="color: pink;">02</p>
+                    </div>
+                    <div class="Card">
+                        <img src="assets/jams.webp" alt="" class="card-img" style="width: 100%;">
+                        <div class="body">
+                            <p class="header display-4">lorem</p>
+                            <p style="color: pink;text-decoration: none;">A weekly-ish playlist curated by the employees @ BASIC/DEPT®️</p>
+                            <a href="#" style="text-decoration: none;color: pink;">Visit the Site</a>
+                        </div>
+                    </div>
+        
+                    <div class="border-lines">
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                        <p style="color: pink;">03</p>
+                    </div>
+                    <div class="Card">
+                        <img src="assets/jams.webp" alt="" class="card-img" style="width: 100%;">
+                        <div class="body">
+                            <p class="header display-4">lorem</p>
+                            <p style="color: pink;text-decoration: none;">A weekly-ish playlist curated by the employees @ BASIC/DEPT®️</p>
+                            <a href="#" style="text-decoration: none;color: pink;">Visit the Site</a>
+                        </div>
+                    </div>
+        
+                    <div class="border-lines">
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                        <p style="color: pink;">04</p>
+                    </div>
+                    <div class="Card">
+                        <img src="assets/jams.webp" alt="" class="card-img" style="width: 100%;">
+                        <div class="body">
+                            <p class="header display-4">lorem</p>
+                            <p style="color: pink;text-decoration: none;">A weekly-ish playlist curated by the employees @ BASIC/DEPT®️</p>
+                            <a href="#" style="text-decoration: none;color: pink;">Visit the Site</a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-lines">
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                        <p style="color: pink;">05</p>
+                    </div>
+                    <div class="Card">
+                        <img src="assets/jams.webp" alt="" class="card-img" style="width: 100%;">
+                        <div class="body">
+                            <p class="header display-4">lorem</p>
+                            <p style="color: pink;text-decoration: none;">A weekly-ish playlist curated by the employees @ BASIC/DEPT®️</p>
+                            <a href="#" style="text-decoration: none;color: pink;">Visit the Site</a>
+                        </div>
+                    </div>
+                    <div class="border-lines"> 
+                        <div style="width: 2px;height: 450px; background-color: white;"></div>
+                    </div>
+                </div>
                 
             </div>
         </div>
 
         <!--Footer-->
-        <footer class="footer bg-dark text-white mt-5" >
+        <footer class="footer bg-dark text-white mt-5 px-1" >
             <div class="container-lg py-5">
                 <div class="row">
                     <div class="col-12 col-lg-6">
@@ -496,8 +467,8 @@
                     <div class="col-12 col-lg-6">
                         <h4><span><i class="bi bi-circle-fill"></i></span> STAY IN THE KNOW</h4>
                         <div class="mb-3 custom-border ">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="email" class="form-control fs-4 w-75 w-lg-100 d-inline bg-none bg-transparent border-0 shadow-none " id="exampleFormControlInput1" placeholder="Email Address">
+                            <label for="exampleFormControlInput1" class="form-label d-block">Email Address</label>
+                            <input type="email" class="form-control fs-4 w-75 w-lg-100 d-inline bg-none bg-transparent text-white border-0 shadow-none " id="exampleFormControlInput1" placeholder="Email Address">
                             <span><i class="bi bi-arrow-right fs-3"></i></span>
                         </div>
                     </div>
@@ -539,31 +510,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--Modal trigger btn-->
-            <button type="button" class="btn btn-secondary m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Register for updates
-              </button>
-
-            <!--Modal Content-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
 
             <div class="container-fluid bg-secondary" >
                 <div class="container-lg  text-center d-lg-flex justify-content-between bg-secondary text-dark">
